@@ -11,3 +11,9 @@ h1 {
   text-align: center;
   color: white;
 }
+
+.maintxt {
+  color: white;
+  font-size: 4ch;
+  text-align: center;
+}
