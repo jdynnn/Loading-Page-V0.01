@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>HORROR HOUSE</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <script src="https://aframe.io/releases/1.1.0/aframe.min.js"></script>
+
+  <!--Script needed to create the navmesh in the inspector-->
+  <script src="https://recast-api.donmccurdy.com/aframe-inspector-plugin-recast.js" crossorigin="anonymous"></script>
+
+  <!-- A-frame extras-->
+  <script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v6.1.1/dist/aframe-extras.min.js"></script>
+  <script src="https://rawgit.com/donmccurdy/aframe-extras/v2.1.1/dist/aframe-extras.loaders.min.js"></script>
+
+  <!-- Camera rig -->
+  <a-entity id="rig" position="0 0 0" movement-controls="constrainToNavMesh: true;speed:0.5;">
+  <a-entity camera id="camera" position="0 1.6 0" look-controls extended-wasd-controls>
+  </a-entity>
+  </a-entity>
+
+</head>
+    <body>
+        <a-scene physics="gravity: -9.8; restitution: 0.1" inspector-plugin-recast>
+    <!---------- Main ---------->
+    <!-- Sky -->
+    <a-sky color="black"></a-sky>
+
+  <!-- Moon -->
+  <a-sphere id="moon" position="-270 290 290" radius="20" material="shader: flat;"
+  src="https://codehs.com/uploads/910522174a4d866857a356245177d0df"></a-sphere>
+
+  <a-light id="dir" type="directional" position="-100 120 120"
+  color="white" light="castShadow: true"></a-light>
+
+  <!-- Ground/Grass -->
+  <a-plane repeat="300 300" id="ground" position="0 0 -20" height="500" width="500"
+  rotation="-90 0 0" src="https://codehs.com/uploads/2a5e6667226010f35801e8aa293fbf6e"></a-plane>
+
+  <!---------- Details ---------->
+  <!-- Road -->
+  <a-plane repeat="-20 1" id="road" position="0 0.01 -3" height="10" width="500"
+  rotation="-90 0 0" src="https://codehs.com/uploads/93e557c1f9485c2fb084b4c31c77ac1a"></a-plane>
+
+  <!-- Barriers -->
+  <a-box id="bottomPart" repeat="500 1" position="0 0.02 -3" height="0.3" width="500" depth="0.4"
+  src="https://codehs.com/uploads/2b717a972e477cc57404337c19f2abb6"></a-box>
+  <a-box id="frontRotate" repeat="500 1" position="0 0.190 -2.955.9" height="0.1" width="500" depth="0.3"
+  rotation="-10 0 0" src="https://codehs.com/uploads/2b717a972e477cc57404337c19f2abb6"></a-box>
+  <a-box id="backRotate" repeat="500 1" position="0 0.190 -3.042" height="0.1" width="500" depth="0.3"
+  rotation="10 0 0" src="https://codehs.com/uploads/2b717a972e477cc57404337c19f2abb6"></a-box>
+  <a-box id="mainPart" repeat="500 1" position="0 0.42 -3" height="0.3" width="500" depth="0.3"
+  src="https://codehs.com/uploads/2b717a972e477cc57404337c19f2abb6"></a-box>
+
+  <!-- Streetlights -->
+
+
+  <!-- Hills/Mountains -->
+  <a-gltf
+  src=""
+  position=""
+  ></a-gltf>
+
+  <!-- Trucks -->
+  <!-- Buildings -->
+
+      </a-scene>
+    </body>
+</html>
