@@ -3,16 +3,10 @@ html, body {
   margin: 0;
   background-attachment: fixed;
 }
-/* - - - - - Home page - - - - - */
+/* - - - - - Landing page - - - - - */
 
 h1 {
   font-size: 9ch;
   text-align: center;
   color: black;
-}
-
-.maintxt {
-  color: black;
-  font-size: 4ch;
-  text-align: center;
 }
